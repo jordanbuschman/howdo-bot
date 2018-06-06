@@ -1,0 +1,23 @@
+{
+  "name": "howdoi-bot",
+  "version": "0.1.0",
+  "description": "A Yahoo Answers shitposting bot for Discord",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "debug": "DEBUG=howdoi-bot* node ./src/app.js"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "debug": "^3.1.0",
+    "discord.js": "^11.3.2",
+    "google": "^2.1.0",
+    "jsdom": "^11.10.0",
+    "promise": "^8.0.1",
+    "turndown": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jordanbuschman/howdoi-bot"
+  },
+  "author": "Jordan Buschman"
+}
