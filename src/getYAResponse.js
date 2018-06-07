@@ -72,7 +72,8 @@ function getYAResponse(params) {
                     } else if (results && !hasEllipses && results.length >= 1) {
                         var topResult = results[0].innerHTML;
                     }
-                    return resolve({ question: question, text: turndownservice.turndown(topResult), source: link });
+
+                    return resolve({ question: question, text: turndownservice.turndown(topResult.replace(/([*\~_\\])/g, '\\$1')), source: link });
                 }).catch(function(err) {
                     debug(err);
                     callback();
