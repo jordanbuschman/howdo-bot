@@ -1,11 +1,12 @@
+require('dotenv').config()
+
 var debug = require('debug')('howdoi-bot');
 
 var Discord = require('discord.js');
 var async = require('async');
 
-const config = require('../config');
 const client = new Discord.Client();
-client.login(config.token);
+client.login(process.env.BOT_TOKEN);
 
 var commands = require('./commands')(client);
 var getYAResponse = require('./getYAResponse');
